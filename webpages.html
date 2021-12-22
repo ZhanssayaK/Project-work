@@ -1,0 +1,793 @@
+<!doctype html>
+<html lang="zxx">
+<head>
+    <meta charset="utf-8">
+	<meta name="format-detection" content="telephone=no">
+    <meta id="Viewport" name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1">
+    <title>Upland - Main page</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Codystar&family=Darker+Grotesque:wght@400;500;600;700;800&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="assets/css/main.css">    
+    <style>
+        .most-popular__left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: white;
+  color: black;
+}
+
+.muzieknootjes {
+  display: block;
+  margin: auto;
+  position: relative;
+  width: 50%;
+  min-width: 300px;
+  height: 200px;
+  border: 0px solid #000;
+}
+
+.noot-1,
+.noot-2,
+.noot-3,
+.noot-4 {
+  position: absolute;
+  animation: notes 2s infinite linear;
+  font-size: 35px;
+  opacity: 0;
+}
+
+.noot-1 {
+  top: 60px;
+  left: 0;
+  animation-delay: 0.5s;
+}
+
+.noot-2 {
+  top: 30px;
+  left: 30%;
+  animation-delay: 1s;
+}
+
+.noot-3 {
+  top: 90px;
+  left: 60%;
+  animation-delay: 1.5s;
+}
+
+.noot-4 {
+  top: 40px;
+  left: 90%;
+  animation-delay: 2s;
+}
+
+@keyframes notes {
+  0% {
+    transform: scale(1) translate(0, 0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.5) translate(50%, -50%);
+  }
+  80% {
+    opacity: 0;
+    transform: scale(1.5) translate(100%, -100%);
+  }
+  100% {
+    transform: scale(1.5) translate(100%, -100%);
+    opacity: 0;
+  }
+}
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -64.5px;
+  margin-top: -85.5px;
+}
+
+.ghost {
+  animation: float 3s ease-out infinite;
+}
+
+@keyframes float {
+  50% {
+     transform: translate(0, 20px);
+  }
+}
+.shadowFrame {
+  width: 130px;
+  margin-top: 15px;
+}
+.shadow {
+  animation: shrink 3s ease-out infinite;
+  transform-origin: center center;
+  ellipse {
+    transform-origin: center;
+  }
+}
+
+@keyframes shrink {
+  0% {
+    width: 90%;
+    margin: 0 5%;
+  }
+  50% {
+    width: 60%;
+    margin: 0 18%;
+  }
+  100% {
+    width: 90%;
+    margin: 0 5%;
+  }
+}
+    </style>
+</head>
+<body class="loaded">
+
+    <div class="page-container">
+
+        <!-- BEGIN HEADER -->
+        <header class="header">
+            <div class="header__cols">
+                <div class="header__left">
+                    <div class="header__inner-cols">
+                        <div class="header__inner-col header__inner-col_mob">
+                            <button class="mob-button js-mob-open">
+                                <span class="mob-button__icon"></span>
+                            </button>
+                        </div>
+                        <div class="header__inner-col">
+                            <a class="header-logo" href="#">
+                                <img class="header-logo__image" src="assets/img/svg/logo.svg" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="header__center js-from-1">
+                    <div class="header-mob js-content-1">
+                        <ul class="main-nav">
+                            <li class="main-nav__item">
+                                <a style="color: white;" href="maps.html">Location</a>
+                            </li>
+                            <li class="main-nav__item">
+                                <a class="main-nav__link js-scrolltoid" href="#features">Features</a>
+                            </li>
+                            <li class="main-nav__item">
+                                <a class="main-nav__link js-scrolltoid" href="#download">Download app</a>
+                            </li>
+                            <li class="main-nav__item">
+                                <a class="main-nav__link js-scrolltoid" href="#ui">UI screens</a>
+                            </li>
+                            <li class="main-nav__item">
+                                <a class="main-nav__link js-scrolltoid" href="#testimonials">Testimonials</a>
+                            </li>
+                            <li class="main-nav__item">
+                                <a class="main-nav__link js-scrolltoid" href="#faq">FAQ</a>
+                            </li>
+                            <li class="main-nav__item">
+                                <a class="main-nav__button js-scrolltoid" href="#trial">Free trial</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="header__right js-from-2">
+                    <div class="header-mob js-content-2">
+                        <a class="header-tel" href="tel:+17426584122">+1 742 65 84 122</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- HEADER END -->
+
+        <!-- MOBILE NAVIGATION -->
+        <div class="hide-mob js-mob-hide">
+            <div class="hide-mob__bg">
+                <button class="hide-mob__close close-button close-button_orange js-mob-close"></button>  
+                <div class="hide-mob__mask js-mob-close"></div>
+                <div class="hide-mob__content js-to-1"></div>
+                <div class="hide-mob__bottom js-to-2"></div>                
+            </div>              
+        </div>
+        <!-- MOBILE NAVIGATION END -->        
+
+        <!-- BEGIN MAIN -->
+        <main class="main">      
+
+            <!-- BEGIN FIRST SCREEN -->
+            <section class="first-screen">
+                <div class="first-screen__main wrapper">
+                    <div class="first-screen__max">
+                        <div class="first-screen__content">
+                            <div class="first-screen__cell">
+                                <span class="above-title">trendy application</span>
+                                <h1 class="first-screen__title">Work faster with powerful tools</h1>
+                                <p class="first-screen__text">There's no point in sticking with the same wireframe or prototyping tool when new and improved UX tools and UI resources are very often added to the web. Work faster, better, and more efficiently with more powerful tools and fresher UI suites.</p>
+                                <a class="first-screen__button button" href="#">
+                                    <span class="button__text">Learn More</span>
+                                </a>
+                            </div>
+                        </div>
+                        <img class="first-screen__phone" src="https://assets.hongkiat.com/uploads/designers-ui-ux-tools/Vonn-Mobile-Material-Design-UI-Kit.jpg">
+                        <img class="first-screen__elements" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" data-lazy="assets/img/svg/first-screen-elements.svg" alt="" data-lazy-mob>
+                    </div>
+                </div>
+                <div class="first-screen__pseudotext" data-title="work faster with powerful tools"></div>
+                <div class="first-screen__bg-1" data-bg="assets/img/first-screen-bg.jpg" data-lazy-mob></div>
+                <div class="first-screen__bg-2" data-bg="assets/img/first-screen-bottom.png" data-lazy-mob></div>
+            </section>
+            <!-- FIRST SCREEN END -->
+
+            <div class="main-top">
+
+                <!-- BEGIN THE MOST POPULAR -->
+                <article class="most-popular">
+                    <div class="most-popular__main wrapper">
+                        <div class="most-popular__cols">
+                            <div class="most-popular__right">
+                                <h2 class="most-popular__title main-title main-title_align-left" data-title="The most popular application 2021">
+                                    <span class="main-title__text">The most popular application&nbsp;2021</span>
+                                </h2>
+                                <p class="most-popular__text">Spotify is one of the most popular apps in the music space. It has consistently upgraded its mobile app design, streaming quality, and music sharing capability. </p>
+                                <ul class="check-list">
+                                    <li class="check-list__item">Offline listening for premium members, allowing users to download the songs they like and listen without an internet connection (saying goodbye to iTunes).</li>
+                                    <li class="check-list__item">Playlist following and sharing allows users to share and discover new music.</li>
+                                    <li class="check-list__item">Made-for-you playlists, with the app’s algorithm sending you new music based on your preferences.</li>
+                                </ul>
+                            </div>
+                            <div class="most-popular__left">
+                               <div class="muzieknootjes">
+  <div class="noot-1">
+  &#9835; &#9833;
+</div>
+<div class="noot-2">
+  &#9833;
+</div>
+<div class="noot-3">
+  &#9839; &#9834;
+</div>
+<div class="noot-4">
+  &#9834;
+</div>
+</div><div class="container">
+<svg class="ghost" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+     width="127.433px" height="132.743px" viewBox="0 0 127.433 132.743" enable-background="new 0 0 127.433 132.743"
+     xml:space="preserve">
+<path fill="#65FF96" d="M116.223,125.064c1.032-1.183,1.323-2.73,1.391-3.747V54.76c0,0-4.625-34.875-36.125-44.375
+    s-66,6.625-72.125,44l-0.781,63.219c0.062,4.197,1.105,6.177,1.808,7.006c1.94,1.811,5.408,3.465,10.099-0.6
+    c7.5-6.5,8.375-10,12.75-6.875s5.875,9.75,13.625,9.25s12.75-9,13.75-9.625s4.375-1.875,7,1.25s5.375,8.25,12.875,7.875
+    s12.625-8.375,12.625-8.375s2.25-3.875,7.25,0.375s7.625,9.75,14.375,8.125C114.739,126.01,115.412,125.902,116.223,125.064z"/>
+<circle fill="#013E51" cx="86.238" cy="57.885" r="6.667"/>
+<circle fill="#013E51" cx="40.072" cy="57.885" r="6.667"/>
+<path fill="#013E51" d="M71.916,62.782c0.05-1.108-0.809-2.046-1.917-2.095c-0.673-0.03-1.28,0.279-1.667,0.771
+    c-0.758,0.766-2.483,2.235-4.696,2.358c-1.696,0.094-3.438-0.625-5.191-2.137c-0.003-0.003-0.007-0.006-0.011-0.009l0.002,0.005
+    c-0.332-0.294-0.757-0.488-1.235-0.509c-1.108-0.049-2.046,0.809-2.095,1.917c-0.032,0.724,0.327,1.37,0.887,1.749
+    c-0.001,0-0.002-0.001-0.003-0.001c2.221,1.871,4.536,2.88,6.912,2.986c0.333,0.014,0.67,0.012,1.007-0.01
+    c3.163-0.191,5.572-1.942,6.888-3.166l0.452-0.453c0.021-0.019,0.04-0.041,0.06-0.061l0.034-0.034
+    c-0.007,0.007-0.015,0.014-0.021,0.02C71.666,63.771,71.892,63.307,71.916,62.782z"/>
+<circle fill="#0AFC16" stroke="#00E161" stroke-miterlimit="10" cx="18.614" cy="99.426" r="3.292"/>
+<circle fill="#0AFC16" stroke="#00E161" stroke-miterlimit="10" cx="95.364" cy="28.676" r="3.291"/>
+<circle fill="#0AFC16" stroke="#00E161" stroke-miterlimit="10" cx="24.739" cy="93.551" r="2.667"/>
+<circle fill="#0AFC16" stroke="#00E161" stroke-miterlimit="10" cx="101.489" cy="33.051" r="2.666"/>
+<circle fill="#0AFC16" stroke="#00E161" stroke-miterlimit="10" cx="18.738" cy="87.717" r="2.833"/>
+<path fill="#0AFC16" stroke="#00E161" stroke-miterlimit="10" d="M116.279,55.814c-0.021-0.286-2.323-28.744-30.221-41.012
+    c-7.806-3.433-15.777-5.173-23.691-5.173c-16.889,0-30.283,7.783-37.187,15.067c-9.229,9.736-13.84,26.712-14.191,30.259
+    l-0.748,62.332c0.149,2.133,1.389,6.167,5.019,6.167c1.891,0,4.074-1.083,6.672-3.311c4.96-4.251,7.424-6.295,9.226-6.295
+    c1.339,0,2.712,1.213,5.102,3.762c4.121,4.396,7.461,6.355,10.833,6.355c2.713,0,5.311-1.296,7.942-3.962
+    c3.104-3.145,5.701-5.239,8.285-5.239c2.116,0,4.441,1.421,7.317,4.473c2.638,2.8,5.674,4.219,9.022,4.219
+    c4.835,0,8.991-2.959,11.27-5.728l0.086-0.104c1.809-2.2,3.237-3.938,5.312-3.938c2.208,0,5.271,1.942,9.359,5.936
+    c0.54,0.743,3.552,4.674,6.86,4.674c1.37,0,2.559-0.65,3.531-1.932l0.203-0.268L116.279,55.814z M114.281,121.405
+    c-0.526,0.599-1.096,0.891-1.734,0.891c-2.053,0-4.51-2.82-5.283-3.907l-0.116-0.136c-4.638-4.541-7.975-6.566-10.82-6.566
+    c-3.021,0-4.884,2.267-6.857,4.667l-0.086,0.104c-1.896,2.307-5.582,4.999-9.725,4.999c-2.775,0-5.322-1.208-7.567-3.59
+    c-3.325-3.528-6.03-5.102-8.772-5.102c-3.278,0-6.251,2.332-9.708,5.835c-2.236,2.265-4.368,3.366-6.518,3.366
+    c-2.772,0-5.664-1.765-9.374-5.723c-2.488-2.654-4.29-4.395-6.561-4.395c-2.515,0-5.045,2.077-10.527,6.777
+    c-2.727,2.337-4.426,2.828-5.37,2.828c-2.662,0-3.017-4.225-3.021-4.225l0.745-62.163c0.332-3.321,4.767-19.625,13.647-28.995
+    c3.893-4.106,10.387-8.632,18.602-11.504c-0.458,0.503-0.744,1.165-0.744,1.898c0,1.565,1.269,2.833,2.833,2.833
+    c1.564,0,2.833-1.269,2.833-2.833c0-1.355-0.954-2.485-2.226-2.764c4.419-1.285,9.269-2.074,14.437-2.074
+    c7.636,0,15.336,1.684,22.887,5.004c26.766,11.771,29.011,39.047,29.027,39.251V121.405z"/>
+</svg>
+
+
+
+  <p class="shadowFrame"><svg version="1.1" class="shadow" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="61px" y="20px"
+     width="122.436px" height="39.744px" viewBox="0 0 122.436 39.744" enable-background="new 0 0 122.436 39.744"
+     xml:space="preserve">
+<ellipse fill="#00442B" cx="61.128" cy="19.872" rx="49.25" ry="8.916"/>
+    </svg></p>
+</div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <img class="most-popular__left-element side-element" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" data-lazy="assets/img/svg/side-element_2.svg" alt="">
+                </article>
+                <!-- THE MOST POPULAR END -->
+
+                <!-- BEGIN WHAT YOU GET -->
+                <section class="what-you-get">
+                    <div class="what-you-get__main wrapper">
+                        <h3 class="main-title" data-title="See what you will get with us" id="features">
+                            <span class="main-title__text">See what you will get with&nbsp;us</span>
+                        </h3>
+                        <div class="features">
+                            <article class="feature">
+                                <div class="feature__bg">
+                                    <img class="feature__image" src="https://assets.hongkiat.com/uploads/designers-ui-ux-tools/pidoco.jpg" alt="">
+                                    <div class="feature__content">
+                                        <h4 class="feature__title">Pidoco</h4>
+                                        <p class="feature__text">Quickly and easily create interactive wireframes with the drag-and-drop feature in Picodo, then create, edit, and share unlimited wireframe layouts or prototypes with team members and customers in real time.</p>
+                                    </div>
+                                </div>
+                            </article>
+                            <article class="feature">
+                                <div class="feature__bg">
+                                    <img class="feature__image" src="https://assets.hongkiat.com/uploads/designers-ui-ux-tools/appcooker.jpg" alt="">
+                                    <div class="feature__content">
+                                        <h4 class="feature__title">AppCooker</h4>
+                                        <p class="feature__text">With AppCooker's advanced features, you'll save time, money, and wow your customers by creating and distributing beautiful layouts for iPhones and iPads using your own iOS widgets. Don't have time to create a layout from scratch? Then AppCooker is the app for you.</p>
+                                    </div>
+                                </div>
+                            </article>
+                            <article class="feature">
+                                <div class="feature__bg">
+                                    <img class="feature__image" src="https://ux.pub/wp-content/uploads/2021/09/9-4.png" alt="">
+                                    <div class="feature__content">
+                                        <h4 class="feature__title">Adobe Xd</h4>
+                                        <p class="feature__text">A prototyping tool that brings your ideas to life. Designers can create prototypes without programming skills and get a prototype with elaborate animations for user testing in no time. </p>
+                                    </div>
+                                </div>
+                            </article>                                                        
+                        </div>
+                    </div>
+                    <img class="what-you-get__right-element side-element" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" data-lazy="assets/img/svg/side-element_1.svg" alt="">
+                </section>
+                <!-- WHAT YOU GET END -->
+            </div>
+            <!-- BEGIN PRESENTATION -->
+            <section class="presentation-block">
+                <div class="presentation-block__main wrapper">
+                    <h3 class="presentation-block__title main-title main-title_white" data-title="The Most Popular Applications in 2021" id="ui">
+                        <span class="main-title__text">The Most Popular Applications in 2021</span>
+                    </h3>        
+                    <div class="ui-slider js-slider">
+                        <div class="ui-slider__arrows arrows-1 js-slider-arrows">
+                        </div>
+                        <div class="ui-slider__all">
+                            <div class="ui-slider__list-wrap js-slider-loader loaded">
+                                <div class="ui-slider__list js-slider-list">
+                                    <div class="ui-slider__item js-slider-item">
+                                        <div class="ui-slider__image-wrap">
+                                            <img class="ui-slider__image" src="https://it-true.ru/wp-content/uploads/2018/08/Uber-Start.jpg" height="329" width="329"   alt="">
+                                        </div>
+                                    </div>
+                                    <div class="ui-slider__item js-slider-item">
+                                        <div class="ui-slider__image-wrap">
+                                            <img class="ui-slider__image" src="https://st.kashalot.com/img/club/2018/02/25/instagram-png-instagram-logo-2-png-8-de-abril-de-2017-927-kb-3500-3393-3500-b536c1dd-club.png" height="329" width="329"  alt="">
+                                        </div>
+                                    </div>
+                                    <div class="ui-slider__item js-slider-item">
+                                        <div class="ui-slider__image-wrap">
+                                            <img class="ui-slider__image" src="https://lf16-tiktok-common.ibytedtos.com/obj/tiktok-web-common-sg/mtact/static/images/share_img.png"  height="329" width="329"  alt="">
+                                        </div>
+                                    </div>
+                                    <div class="ui-slider__item js-slider-item">
+                                        <div class="ui-slider__image-wrap">
+                                            <img class="ui-slider__image" src="data:image/jpeg;base64,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" height="329" width="329"  alt="">
+                                        </div>
+                                    </div>
+                                    <div class="ui-slider__item js-slider-item">
+                                        <div class="ui-slider__image-wrap">
+                                            <img class="ui-slider__image" src="https://cdnimg.rg.ru/img/content/213/33/98/nertfliks_d_850.jpg" height="329" width="329"  alt="">
+                                        </div>
+                                    </div>
+                                    <div class="ui-slider__item js-slider-item">
+                                        <div class="ui-slider__image-wrap">
+                                            <img class="ui-slider__image" src="https://bitprice.ru/sites/default/files/styles/mt_photo/public/img/logo/brands/446135.png?itok=JiLH3EZv" height="329" width="329" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="ui-slider__item js-slider-item">
+                                        <div class="ui-slider__image-wrap">
+                                            <img class="ui-slider__image" src="https://www.youtube.com/img/desktop/yt_1200.png" height="329" width="329" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="ui-slider__item js-slider-item">
+                                        <div class="ui-slider__image-wrap">
+                                            <img class="ui-slider__image" src="https://fornote.net/wp-content/uploads/2020/06/dropbox.jpg" height="329" width="329" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="ui-slider__item js-slider-item">
+                                        <div class="ui-slider__image-wrap">
+                                            <img class="ui-slider__image" src="https://www.russianireland.com/wp-content/uploads/2019/12/whatsapp-5.jpg" height="329" width="329" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="ui-slider__item js-slider-item">
+                                        <div class="ui-slider__image-wrap">
+                                            <img class="ui-slider__image" src="data:image/png;base64,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" height="329" width="329" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="ui-slider__item js-slider-item">
+                                        <div class="ui-slider__image-wrap">
+                                            <img class="ui-slider__image" src="https://play-lh.googleusercontent.com/Fya0IkuvGeqRq2LvwaeuY78Dmg5V4U0jxjKOeXArCgmyLGBDjOyoWUuaIM7ibKkwcg" height="329" width="329" alt="">
+                                    </div>
+                                    <div class="ui-slider__item js-slider-item">
+                                        <div class="ui-slider__image-wrap">
+                                            <img class="ui-slider__image" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" data-lazy="https://via.placeholder.com/329x690" alt="">
+                                        </div>
+                                    </div>                                
+                                </div>
+                                <div class="ui-slider__bg">
+                                    <img class="ui-slider__bg-left" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" data-lazy="assets/img/svg/presentation-left.svg" alt="">
+                                    <img class="ui-slider__bg-right" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" data-lazy="assets/img/svg/presentation-right.svg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>            
+                </div>
+                <div class="presentation-block__bg"></div>
+            </section>
+            <!-- PRESENTATION END -->
+            <!-- BEGIN DOWNLOAD -->
+            <section class="downloads-block">
+                <div class="downloads-block__main wrapper">
+                    <div class="downloads-block__cols">
+                        <div class="downloads-block__left">
+                            <div class="downloads">
+                                <h3 class="downloads__title main-title main-title_align-left" data-title="Easy download and ready to use" id="download">
+                                    <span class="main-title__text">Easy download and ready to use</span>
+                                </h3>
+                                <p class="downloads__text"><b>Work faster, better and more efficiently with more powerful tools and fresher user interface suites.</b></p>
+                                <div class="downloads__buttons">
+                                    <div class="downloads__button-wrap">
+                                        <a class="downloads__button button button_big" href="#">
+                                            <span class="button__cols">
+                                                <span class="button__col">
+                                                    <span class="button__icon button__icon_1"></span>
+                                                </span>
+                                                <span class="button__col">
+                                                    <span class="button__text-small">Download on the</span>
+                                                    <span class="button__text-big">Google play</span>
+                                                </span>
+                                            </span>
+                                        </a>
+                                    </div>
+                                    <div class="downloads__button-wrap">
+                                        <a class="downloads__button button button_big button_border" href="#">
+                                            <span class="button__cols">
+                                                <span class="button__col">
+                                                    <span class="button__icon button__icon_2"></span>
+                                                </span>
+                                                <span class="button__col">
+                                                    <span class="button__text-small">Download on the</span>
+                                                    <span class="button__text-big">App store</span>
+                                                </span>
+                                            </span>
+                                        </a>                                        
+                                    </div>                                    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="downloads-block__right">
+                            <div class="prices">
+                                <div class="prices__col">
+                                    <div class="prices__top">
+                                        <h4 class="prices__title">basic</h4>
+                                        <span class="prices__cost">$12<span>.99</span></span>
+                                        <span class="prices__per">/per month</span>
+                                    </div>
+                                    <ul class="unordered">
+                                        <li class="unordered__item"><b>If you want full Prime benefits but prefer to spread out your payments, you’ll pay about $155 a year. If you receive qualifying government assistance, you can get a Prime membership for $5.99 per month.Those who pay an annual lump sum for the full membership will spend less in the long run.</b> </li> 
+                                    </ul>
+                                </div>
+                                <div class="prices__col">
+                                    <div class="prices__top">
+                                        <h4 class="prices__title">popular</h4>
+                                        <span class="prices__cost">$99<span>.99</span></span>
+                                        <span class="prices__per">/per month</span>
+                                    </div>
+                                    <ul class="unordered">
+                                        <li class="unordered__item"><b>Those who pay an annual lump sum for the full membership will spend less in the long run.</b></li>
+                                    </ul>
+                                </div>                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <img class="downloads-block__right-element side-element" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" data-lazy="assets/img/svg/side-element_1.svg" alt="">
+            </section>
+            <!-- DOWNLOAD END -->
+
+            <!-- BEGIN RESPONSES -->
+            <div class="responses-block">
+                <div class="responses-block__main wrapper js-slider">
+                    <div class="responses-block__cols">
+                        <div class="responses-block__left">
+                            <h3 class="responses-block__title main-title main-title_align-left" data-title="They say about us" id="testimonials">
+                                <span class="main-title__text">They say about us</span>
+                            </h3>
+                        </div>
+                        <div class="responses-block__right arrows-2 js-slider-arrows"></div>                        
+                    </div>
+                    <div class="responses js-slider-loader loaded">
+                        <div class="responses__list js-slider-list js-slider-news js-cols">
+                            <div class="responses__item js-slider-item">
+                                <div class="responses__bg">
+                                    <blockquote class="responses__quote">
+                                        <p class="responses__text js-col">I have read lots and lots of articles on this subject and yours really stands out thank you.</p>
+                                        <footer class="respondent">
+                                            <div class="respondent__col">
+                                                <img class="respondent__image" src="https://via.placeholder.com/60x60" alt="">
+                                            </div>
+                                            <div class="respondent__col">
+                                                <span class="respondent__name">ANN TORRES</span>
+                                            </div>
+                                        </footer>
+                                      </blockquote>
+                                </div>
+                            </div>
+                            <div class="responses__item js-slider-item">
+                                <div class="responses__bg">
+                                    <blockquote class="responses__quote">
+                                        <p class="responses__text js-col">Thanks for sharing, this article is extremely great and helpful it is very useful for users. Thanks and keep Sharing.</p>
+                                        <footer class="respondent">
+                                            <div class="respondent__col">
+                                                <img class="respondent__image" src="https://via.placeholder.com/60x60" alt="">
+                                            </div>
+                                            <div class="respondent__col">
+                                                <span class="respondent__name">Rupinder</span>
+                                            </div>
+                                        </footer>
+                                      </blockquote>
+                                </div>
+                            </div>
+                            <div class="responses__item js-slider-item">
+                                <div class="responses__bg">
+                                    <blockquote class="responses__quote">
+                                        <p class="responses__text js-col">These all apps are very important for our lifestyle.
+                                                                        I Really appreciate your blog. Thanks and keep sharing.</p>
+                                        <footer class="respondent">
+                                            <div class="respondent__col">
+                                                <img class="respondent__image" src="https://via.placeholder.com/60x60" alt="">
+                                            </div>
+                                            <div class="respondent__col">
+                                                <span class="respondent__name">Zamil</span>
+                                            </div>
+                                        </footer>
+                                      </blockquote>
+                                </div>
+                            </div>
+                            <div class="responses__item js-slider-item">
+                                <div class="responses__bg">
+                                    <blockquote class="responses__quote">
+                                        <p class="responses__text js-col">These all apps very important for this generation. Everyone should download this apps in their smartphones.
+                                            I appreciate your blog. Thanks and keep sharing.</p>
+                                        <footer class="respondent">
+                                            <div class="respondent__col">
+                                                <img class="respondent__image" src="https://via.placeholder.com/60x60" alt="">
+                                            </div>
+                                            <div class="respondent__col">
+                                                <span class="respondent__name">Sagar Trivedi</span>
+                                            </div>
+                                        </footer>
+                                      </blockquote>
+                                </div>
+                            </div> 
+                            <div class="responses__item js-slider-item">
+                                <div class="responses__bg">
+                                    <blockquote class="responses__quote">
+                                        <p class="responses__text js-col">Yes, you are right these apps are getting popular with time. Also, they can continue to make their own place, if they provide better service with time.</p>
+                                        <footer class="respondent">
+                                            <div class="respondent__col">
+                                                <img class="respondent__image" src="https://via.placeholder.com/60x60" alt="">
+                                            </div>
+                                            <div class="respondent__col">
+                                                <span class="respondent__name">Anshul Sharma</span>
+                                            </div>
+                                        </footer>
+                                      </blockquote>
+                                </div>
+                            </div>                                                                                      
+                        </div>
+                    </div>
+                </div>
+                <img class="responses-block__left-element side-element" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" data-lazy="assets/img/svg/side-element_2.svg" alt="">
+            </div>
+            <!-- RESPONSES END -->
+            <!-- BEGIN FREE TRIAL -->
+            <section class="trial-block">
+                <div class="trial-block__main wrapper">
+                    <div class="trial" id="trial">
+                        <div class="trial__bg">
+                            <img class="trial__bg-left" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" data-lazy="assets/img/svg/trial-left.svg" alt="">
+                            <img class="trial__bg-right" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" data-lazy="assets/img/svg/trial-right.svg" alt="">
+                        </div>
+                        <div class="trial__icons-wrap">
+                            <span class="trial__pseudotext">Get a free trial for 30 days</span>
+                            <img class="trial__icons" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" data-lazy="assets/img/svg/trial-icons.svg" alt="">
+                        </div>
+                        <div class="trial__content">
+                            <div class="trial__cell">
+                                <span class="above-title">trendy application</span>
+                                <h3 class="trial__title">Get a free trial for <span class="orange">30</span> days</h3>
+                                <a class="trial__button button js-popup-open" href="#">
+                                    <span class="button__text">Get a free trial</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="trial-block__bg"></div>
+                <img class="trial-block__right-element side-element" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" data-lazy="assets/img/svg/side-element_2.svg" alt="">
+            </section>
+            <!-- FREE TRIAL END -->
+            <!-- BEGIN FAQ -->
+            <div class="faq-block">
+                <div class="faq-block__main wrapper">
+                    <div class="faq-block__cols">
+                        <div class="faq-block__left">
+                            <a class="open-video js-popup-open js-popup-video" data-frame="https://youtu.be/TTvHDviXvmo" data-width="800" data-height="900" href="#video-popup">
+                                <img class="open-video__image" src="https://i.ytimg.com/vi/TTvHDviXvmo/hqdefault.jpg?sqp=-oaymwEcCOADEI4CSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBfb8bVGawud0oRmjyCS8ZRPx-kDA" alt="">
+                                <span class="open-video__icon"></span>
+                            </a>
+                        </div>
+                        <div class="faq-block__right">
+                            <h1 class="faq-block__title main-title main-title_align-left" data-title="Prott" id="faq">
+                                <span class="main-title__text">Prott</span>
+                            </h1>
+                            <div class="faq js-faq">
+                                <article class="faq__item js-faq-item active">
+                                    <h3 class="faq__title">
+                                        <a class="faq__button js-faq-button" href="javascript:void(0);">About applications</a>
+                                    </h3>
+                                    <div class="faq__hide js-faq-hide">
+                                        <div class="faq__content">
+                                            <p> A new service from the Japanese team "GoodPatch" for creating prototypes from rough sketches on paper or already fully rendered screens. A beta version of the service was released in April of this year, and an iOS app appeared in October.</p>
+                                        </div>
+                                    </div>
+                                </article>
+                                <article class="faq__item js-faq-item">
+                                    <h3 class="faq__title">
+                                        <a class="faq__button js-faq-button" href="javascript:void(0);">Advantages of the application</a>
+                                    </h3>
+                                    <div class="faq__hide js-faq-hide">
+                                        <div class="faq__content">
+                                            <p> More convenient and flexible interface with adjustable size of working areas</p>
+                                        </div>
+                                    </div>
+                                </article>
+                                <article class="faq__item js-faq-item">
+                                    <h3 class="faq__title">
+                                        <a class="faq__button js-faq-button" href="javascript:void(0);">Disadvantages of the application</a>
+                                    </h3>
+                                    <div class="faq__hide js-faq-hide">
+                                        <div class="faq__content">
+                                            <p>To the existing minuses lack of prototype size for the iPhone 4/4s, as well as the application for Androind.</p>
+                                        </div>
+                                    </div>
+                                </article>                                                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <img class="faq-block__left-element side-element" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" data-lazy="assets/img/svg/side-element_1.svg" alt="">
+            </div>
+            <!-- FAQ END -->  
+        </main>
+        <!-- MAIN END -->
+        
+        <!-- BEGIN FOOTER -->
+        <footer class="footer">
+
+            <!-- BEGIN SUBSCRIPTION -->
+            <div class="subscription wrapper">
+                <div class="subscription__bg">
+                    <div class="subscription__max">
+                        <span class="above-title">newsletter</span>
+                        <span class="subscription__title">Be aware of new features</span>
+                        <span class="subscription__text">From prototyping new designs with interactive features that allow you to explore how the design will work, to gathering feedback from stakeholders without going over budget. With these tools, UX designers can create a robust and reliable user experience.</span>
+                        <form>
+                            <div class="subscribe">
+                                <div class="subscribe__left">
+                                    <input class="subscribe__input text-input" type="text" placeholder="Email">
+                                </div>
+                                <div class="subscribe__right">
+                                    <button class="subscribe__button button">
+                                        <span class="button__text">Subscribe</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>                        
+                    </div>
+                    <img class="subscription__envelope" src="https://ux.pub/wp-content/uploads/2021/09/14-1-scaled-1025x1025.jpg" alt="">
+                </div>
+            </div>
+            <!-- SUBSCRIPTION END -->
+
+            <div class="footer-top wrapper">
+                <a class="footer-logo" href="#">Upland</a>
+                <div class="footer-nav">
+                    <ul class="main-nav main-nav_center">
+                        <li class="main-nav__item">
+                            <a class="main-nav__link js-scrolltoid" href="#features">Features</a>
+                        </li>
+                        <li class="main-nav__item">
+                            <a class="main-nav__link js-scrolltoid" href="#download">Download app</a>
+                        </li>
+                        <li class="main-nav__item">
+                            <a class="main-nav__link js-scrolltoid" href="#ui">UI screens</a>
+                        </li>
+                        <li class="main-nav__item">
+                            <a class="main-nav__link js-scrolltoid" href="#testimonials">Testimonials</a>
+                        </li>
+                        <li class="main-nav__item">
+                            <a class="main-nav__link js-scrolltoid" href="#faq">FAQ</a>
+                        </li>
+                        <li class="main-nav__item">
+                            <a class="main-nav__button js-scrolltoid" href="#trial">Free trial</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-bottom__main wrapper">
+                    <span class="copyrights">&copy; All rights reserved. Upland 2020</span>
+                </div>
+            </div>  
+            <div class="footer__bg" data-bg="assets/img/footer-bg.png"></div>          
+
+        </footer>
+        <!-- FOOTER END -->       
+
+    </div> 
+
+	<!-- BEGIN TRIAL POPUP -->
+	<div class="popup js-popup" id="trial-popup">
+		<div class="popup__row">
+			<div class="popup__cell">
+				<div class="popup__window popup__window_bg">
+                    <button class="popup__close close-button js-popup-close"></button>
+                    <div class="popup__content">
+                        <form>
+                            <div class="trial-form">
+                                <span class="trial-form__title">Get a free trial for <span class="orange">30</span>&nbsp;days</span>
+                                <span class="trial-form__text">Culpa non ex tempor qui nulla laborum. Laboris culpa ea incididunt dolore ipsum tempor duis do ullamc.</span>
+                                <input class="text-input" type="text" placeholder="Name">
+                                <input class="text-input" type="email" placeholder="Email">
+                                <textarea class="textarea" placeholder="Message"></textarea>
+                                <button class="trial-form__button button" type="submit">
+                                    <span class="button__text">Get a free trial</span>
+                                </button>
+                            </div>
+                        </form>
+                    </div>  
+                    <span class="popup__pseudotitle" data-title="Get a free trial for 30 days"></span>        
+				</div>
+            </div>
+            <div class="popup__mask js-popup-close"></div>
+        </div>
+	</div>
+	<!-- TRIAL POPUP END -->     
+
+	<!-- BEGIN VIDEO POPUP -->
+	<div class="popup popup_video js-popup" id="video-popup">
+		<div class="popup__row">
+			<div class="popup__cell">
+				<div class="popup__window">
+					<button class="popup__close close-button close-button_white js-popup-close"></button>
+                    <div class="video-frame js-responsive-video js-video-frame"></div> 
+				</div>
+            </div>
+            <div class="popup__mask js-popup-close"></div>
+        </div>
+	</div>
+	<!-- VIDEO POPUP END -->          
+
+    <script src="assets/js/libs/jquery-3.3.1.min.js"></script> 
+    <script src="assets/js/libs/jquery-migrate-1.4.1.min.js"></script>   
+    <script src="assets/js/components/slick.js"></script>
+    <script src="assets/js/components/fitvids.js"></script>
+    <script src="assets/js/main.js"></script>  
+
+</body>
+</html>

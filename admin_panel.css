@@ -1,0 +1,47 @@
+body {
+    background-color: SlateBlue;
+
+}
+table{
+        font-family: Times New Roman, sans-serif;
+        border-collapse: inherit;
+        width: 100%;
+}
+td{
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 10px;
+    border: 2px solid darkblue;
+    border: 2px solid white;
+    color: white;
+}
+th{
+    border: 1px solid #dddddd;
+    text-align: center;
+    padding: 10px;
+    background-color: darkblue;
+    color: white;
+    font-weight: bold;
+    border-color: white;
+    border: 2px solid white;
+    color: white;
+}
+
+button{
+    background-color: darkblue;
+    color: white;
+    font-weight: bold;
+    padding: 6px;
+    background: darkblue;
+    border-color: white;
+    border: 2px solid white;
+    color: white;
+    font-size: 14px;
+    -webkit-transition: all 0.3 ease;
+    transition: all 0.3 ease;
+    cursor: pointer;
+    width: 100%;
+}
+button:hover, button:active, button:focus{
+  background: SlateBlue;
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="theme-colour" content="#9d4edd">
+	<title>REGISTRATION FORM</title>
+	<link rel="stylesheet" type="text/css" href="login_password.css">
+</head>
+<body>
+	<nav>
+		<a href=""><b>WE ARE PEOPLE OF DIFFERENT PROFESSIONS, BUT WE WERE UNITED BY ONE THING - HELPING CHILDREN.</b></a>
+		<a class="d-none" href="javascript:void(0)" id="logout" onclick="logout()" style="position: absolute; right: 0;"></a>
+	</nav>
+	<center>
+		<div class="container">
+			<p id="num1" class="tabs" onclick="loginfunc()">Log In</p>
+            <p id="num2" class="tabs" onclick="regfunc()">Sign Up</p>
+            <div class="clear"></div>
+            <div class="box">
+            <div id="login" class="subbox">
+            	<h3>WELCOME TO THE WEB PAGE</h3>
+            	<input id="num3" type="email" value="" placeholder="Email" />
+                <input id="num4" type="password" value="" placeholder="Password" />
+                <div class="forms">
+                	<input type="checkbox" onclick="showPass()">
+			        <label>Show Password</label>
+			     </div>
+			     <input type="submit" onclick="login()" value="Sign in"/>
+			     <div class="account1">
+			     	<p>Don't have an account?  <span  onclick="regfunc()"><b>Sign up</b></span></p>
+                </div>
+            </div>
+            <div id="register" class="subbox">
+            	<h3 style="text-align: left;">Sign Up</h3>
+            	<input id="num5" type="email" value="" placeholder="Email"/>
+                <input id="num6" type="password" value="" placeholder="Password"/>
+                <input style="font-size: 16px;"id="num7" type="password" value="" placeholder="Repeat password"/>
+                <input style="font-size: 16px;" id="num8" type="username" value="" placeholder="Your comment"/>
+                <input type="submit" onclick="register()" value="Sign up"/>
+            </div >
+        </div>
+    </div>
+    </center>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script src="login_password.js"></script>
+</html>

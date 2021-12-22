@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>MAPS</title>
+    <style>
+    body{
+        background-color: blue
+    }
+    </style>
+</head>
+<body>
+    <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A49d0ffaca4eaf1011759c53c35392eb5c54cf557bef42d7c43ee2278ad8eadb3&amp;width=1350&amp;height=600&amp;lang=ru_RU&amp;scroll=true"></script>
+    <script>
+        $(document).ready(function(){
+        $("button").click(function(){
+        var div = $("div");  
+        div.animate({left: '120px'}, "slow");
+        div.animate({fontSize: '2em'}, "slow");
+    });
+});
+    </script>
+    <button>JQ ANIMATION</button>
+    <center><div style="background:white;color: darkblue;position:absolute;height:160px;width:200px;">LOCATION: IITU</div></center>
+</body>
+</html>
